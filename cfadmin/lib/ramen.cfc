@@ -76,8 +76,9 @@
 	<cffunction name="unzip">
 		<cfargument name="zipName" required="true" hint="just the file name. path will be the downloads path. (use ramen.download())" />
 		<cfargument name="destFolder" required="true" />
+		<cfargument name="overwrite" default="false" />
 		<cftry>
-			<cfzip action="unzip" file="#getDownloadsPath()##zipName#" destination="#destFolder#" />
+			<cfzip action="unzip" file="#getDownloadsPath()##zipName#" destination="#destFolder#" overwrite="#arguments.overwrite#" />
 			<cfcatch>
 				<cfif findNoCase("already exists", cfcatch.detail)>
 					<cfset writeOutput("Destination directory exists, install aborted. Overwrite not permitted.") />
