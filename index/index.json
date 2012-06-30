@@ -1,3 +1,24 @@
 {
-	"apps":[]
+	"apps":[
+		{
+			"name": "Taffy",
+			"desc": "Taffy is a framework for creating REST API's with extremely terse, object-oriented code.",
+			"icon": "https://github.com/atuttle/Taffy/blob/develop/ramen_install/taffy.png", //30x30 image file
+			"versions": [
+				{
+					"name": "Bleeding Edge Release (BER)",
+					"desc": "The BER is the absolute latest available code. Possibility of bugs, but latest features!",
+					"install": "https://github.com/atuttle/Taffy/blob/develop/ramen_install/install.cfm",
+					"require":[
+						{
+							"name": "location",
+							"label": "Install Location:"
+							"type": "folder",
+							"default": "{webroot}"
+						}
+					]
+				}
+			]
+		}
+	]
 }
