@@ -51,8 +51,16 @@
 						{
 							"name": "Mango 1.6",
 							"desc": "Latest stable release of Mango",
-							"install": "",
-							"require": []
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/MangoBlog.1.6.cfm",
+							"require": [
+								{
+									"name": "parentFolder",
+									"label": "Install Location (folder must already exist)",
+									"type": "folder",
+									"default": "{webroot}"
+								},
+								{}
+							]
 						}
 					]
 				}
