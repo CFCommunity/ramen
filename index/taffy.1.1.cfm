@@ -1,3 +1,5 @@
+<cfimport taglib="lib/tags" prefix="ramen" />
+
 <cfset ramen.namespace("taffy") />
 <cfset userLocation = ramen.getParams().location />
 

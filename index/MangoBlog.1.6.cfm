@@ -1,3 +1,5 @@
+<cfimport taglib="lib/tags" prefix="ramen" />
+
 <cfset ramen.namespace("MangoBlog") />
 <cfset folder = ramen.getParams().parentFolder />
 
