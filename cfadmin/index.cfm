@@ -22,11 +22,9 @@
 	</cfcatch>
 </cftry>
 
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="ramen.css" />
-</head>
-<body>
+<cfimport taglib="lib/tags" prefix="ramen" />
+
+<ramen:layout>
 
 	<cfoutput>
 		<cfloop from="1" to="#arrayLen(json.categories)#" index="cat">
@@ -75,5 +73,5 @@
 			});
 		});
 	</script>
-</body>
-</html>
+
+</ramen:layout>
