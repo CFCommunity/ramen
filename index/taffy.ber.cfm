@@ -1,6 +1,10 @@
 <cfset ramen.namespace("taffy") />
 <cfset userLocation = ramen.getParams().location />
 
+<cfoutput>
+	<strong>Install location:</strong> #userLocation#<br/>
+</cfoutput>
+
 <cfset ramen.download("https://github.com/atuttle/Taffy/zipball/develop", "taffy-ber.zip") />
 <cfset ramen.unzip("taffy-ber.zip", userLocation) />
 
