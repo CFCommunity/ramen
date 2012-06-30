@@ -2,7 +2,7 @@
 
 Ramen is inspired by many things. [Homebrew][1], [Ruby Gems][2], and of course the [Railo Extension Manager][3]. Hat tips all around!
 
-It's an integrated installation system, that's operated by and for the ColdFusion community. It aims to be compatible with ColdFusion 8 and above.
+It's an integrated installation system operated wholly _by and for the ColdFusion Community_. It aims to be compatible with ColdFusion 8 and above.
 
 We'll get the party started by adding installation scripts for some of our favorite frameworks and apps, but it's up to the community to add installer scripts for your favorites. Don't be intimidated, it can be as easy as this!
 
