@@ -9,6 +9,7 @@
 	<cfcatch>
 		<h1>Error</h1>
 		<p>It looks like GitHub is down (or for some other reason, we can't get the index file). Please wait a while and try again.</p>
+		<cfabort/>
 	</cfcatch>
 </cftry>
 
