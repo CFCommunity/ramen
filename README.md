@@ -23,39 +23,41 @@ We'll get the party started by adding installation scripts for some of our favor
 
 The above code sample is [the install script for Taffy 1.1][4]. See how easy it is? Oh, there's 1 more part. You've got to add some JSON to [the index][5]:
 
-	{
-		"name": "Taffy",
-		"desc": "Taffy is a framework for creating REST API's with extremely terse, object-oriented code.",
-		"icon": "",
-		"versions": [
-			{
-				"name": "Bleeding Edge Release (BER)",
-				"desc": "The BER is the absolute latest available code. Possibility of bugs, but latest features!",
-				"install": "https://raw.github.com/CFCommunity/ramen/master/index/taffy.ber.cfm",
-				"require": [
-					{
-						"name": "location",
-						"label": "Install Location:",
-						"type": "folder",
-						"default": "{webroot}"
-					}
-				]
-			},
-			{
-				"name": "1.1 Official Release",
-				"desc": "This is the latest version of Taffy, now with Railo support and improved ColdSpring integration",
-				"install": "https://raw.github.com/CFCommunity/ramen/master/index/taffy.1.1.cfm",
-				"require": [
-					{
-						"name": "location",
-						"label": "Install Location:",
-						"type": "folder",
-						"default": "{webroot}"
-					}
-				]
-			}
-		]
-	}
+```json
+{
+	"name": "Taffy",
+	"desc": "Taffy is a framework for creating REST API's with extremely terse, object-oriented code.",
+	"icon": "",
+	"versions": [
+		{
+			"name": "Bleeding Edge Release (BER)",
+			"desc": "The BER is the absolute latest available code. Possibility of bugs, but latest features!",
+			"install": "https://raw.github.com/CFCommunity/ramen/master/index/taffy.ber.cfm",
+			"require": [
+				{
+					"name": "location",
+					"label": "Install Location:",
+					"type": "folder",
+					"default": "{webroot}"
+				}
+			]
+		},
+		{
+			"name": "1.1 Official Release",
+			"desc": "This is the latest version of Taffy, now with Railo support and improved ColdSpring integration",
+			"install": "https://raw.github.com/CFCommunity/ramen/master/index/taffy.1.1.cfm",
+			"require": [
+				{
+					"name": "location",
+					"label": "Install Location:",
+					"type": "folder",
+					"default": "{webroot}"
+				}
+			]
+		}
+	]
+}
+```
 
 I think you can handle that.
 
