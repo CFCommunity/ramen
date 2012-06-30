@@ -66,13 +66,13 @@ Want your favorite Framework/App/Tool/whatever to be listed? **You're just a pul
 ## Installation into your CF Administrator
 
 * [Download Ramen][6] and extract the `ramen` folder to be inside `/CFIDE/administrator/`.
-* Edit /CFIDE/administrator/custommenu.xml to add this line:
+* Edit `/CFIDE/administrator/custommenu.xml` to add this line:
 
 ```xml
 <menuitem href="ramen/cfadmin/index.cfm" target="content">Ramen</menuitem>
 ```
 
-* If you don't have a submenu block, then add that as well:
+    * If you don't have a submenu block, then add that as well (The label is unimportant, call it whatever you want):
 
 ```xml
 <submenu label="Admin Tools">
