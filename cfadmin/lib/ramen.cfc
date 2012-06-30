@@ -80,7 +80,6 @@
 
 	<cffunction name="cleanup">
 		<cfdirectory action="delete" directory="#variables.tmpPath#" recurse="true" />
-		<cfdirectory action="delete" directory="#variables.tmpPath#" recurse="true" />
 	</cffunction>
 
 </cfcomponent>
