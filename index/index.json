@@ -6,7 +6,7 @@
 			"apps": [
 				{
 					"name": "Taffy",
-					"desc": "Taffy is a framework for creating REST API's with extremely terse, object-oriented code.",
+					"desc": "A framework for creating REST API's with extremely terse, object-oriented code.",
 					"icon": "",
 					"versions": [
 						{
