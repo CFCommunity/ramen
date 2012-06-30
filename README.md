@@ -6,18 +6,20 @@ It's an integrated installation system, that's operated by and for the ColdFusio
 
 We'll get the party started by adding installation scripts for some of our favorite frameworks and apps, but it's up to the community to add installer scripts for your favorites. Don't be intimidated, it can be as easy as this!
 
-	<cfset ramen.namespace("taffy") />
-	<cfset userLocation = ramen.getParams().location />
+```cfm
+<cfset ramen.namespace("taffy") />
+<cfset userLocation = ramen.getParams().location />
 
-	<cfoutput>
-		<strong>Install location:</strong> #userLocation#<br/>
-	</cfoutput>
+<cfoutput>
+	<strong>Install location:</strong> #userLocation#<br/>
+</cfoutput>
 
-	<cfset ramen.download("https://github.com/downloads/atuttle/Taffy/taffy-v1.1.zip", "taffy-1.1.zip") />
-	<cfset ramen.unzip("taffy-1.1.zip", userLocation) />
-	<cfset ramen.cleanup() />
+<cfset ramen.download("https://github.com/downloads/atuttle/Taffy/taffy-v1.1.zip", "taffy-1.1.zip") />
+<cfset ramen.unzip("taffy-1.1.zip", userLocation) />
+<cfset ramen.cleanup() />
 
-	<p>Taffy install complete.</p>
+<p>Taffy install complete.</p>
+```
 
 The above code sample is [the install script for Taffy 1.1][4]. See how easy it is? Oh, there's 1 more part. You've got to add some JSON to [the index][5]:
 
