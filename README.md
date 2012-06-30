@@ -65,22 +65,22 @@ Want your favorite Framework/App/Tool/whatever to be listed? **You're just a pul
 
 ## Installation into your CF Administrator
 
-1. [Download Ramen][6] and extract the `ramen` folder to be inside `/CFIDE/administrator/`.
-2. Edit /CFIDE/administrator/custommenu.xml to add this line:
+* [Download Ramen][6] and extract the `ramen` folder to be inside `/CFIDE/administrator/`.
+* Edit /CFIDE/administrator/custommenu.xml to add this line:
 
 ```xml
-    <menuitem href="ramen/cfadmin/index.cfm" target="content">Ramen</menuitem>
+<menuitem href="ramen/cfadmin/index.cfm" target="content">Ramen</menuitem>
 ```
 
-3. If you don't have a submenu block, then add that as well:
+* If you don't have a submenu block, then add that as well:
 
 ```xml
-	<submenu label="Admin Tools">
-		<menuitem href="ramen/cfadmin/index.cfm" target="content">Ramen</menuitem>
-	</submenu>
+<submenu label="Admin Tools">
+	<menuitem href="ramen/cfadmin/index.cfm" target="content">Ramen</menuitem>
+</submenu>
 ```
 
-4. Then log into your CF Administrator, and look for the Ramen link:
+* Then log into your CF Administrator, and look for the Ramen link:
 
 ![where to find the Ramen link](https://img.skitch.com/20120630-g825ijiddkuaw39yaf6hdbqkbp.png)
 
@@ -104,3 +104,4 @@ This project is free, open source software, available under the MIT License:
 [3]: http://www.getrailo.com/index.cfm/products/railo-extensions/
 [4]: https://github.com/CFCommunity/ramen/blob/master/index/taffy.1.1.cfm
 [5]: https://github.com/CFCommunity/ramen/blob/master/index/index.json
+[6]: https://github.com/CFCommunity/ramen/zipball/master
