@@ -3,7 +3,7 @@
 		{
 			"name": "Taffy",
 			"desc": "Taffy is a framework for creating REST API's with extremely terse, object-oriented code.",
-			"icon": "https://github.com/atuttle/Taffy/blob/develop/ramen_install/taffy.png", //30x30 image file
+			"icon": "https://github.com/atuttle/Taffy/blob/develop/ramen_install/taffy.png",
 			"versions": [
 				{
 					"name": "Bleeding Edge Release (BER)",
