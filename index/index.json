@@ -1,20 +1,45 @@
 {
-	"apps":[
+	"categories":[
 		{
-			"name": "Taffy",
-			"desc": "Taffy is a framework for creating REST API's with extremely terse, object-oriented code.",
-			"icon": "https://github.com/atuttle/Taffy/blob/develop/ramen_install/taffy.png",
-			"versions": [
+			"name": "Development Frameworks",
+			"icon": "dev_frameworks.png",
+			"apps": [
 				{
-					"name": "Bleeding Edge Release (BER)",
-					"desc": "The BER is the absolute latest available code. Possibility of bugs, but latest features!",
-					"install": "https://github.com/atuttle/Taffy/blob/develop/ramen_install/install.cfm",
-					"require":[
+					"name": "Taffy",
+					"desc": "Taffy is a framework for creating REST API's with extremely terse, object-oriented code.",
+					"icon": "https://github.com/atuttle/Taffy/blob/develop/ramen_install/taffy.png",
+					"versions": [
 						{
-							"name": "location",
-							"label": "Install Location:",
-							"type": "folder",
-							"default": "{webroot}"
+							"name": "Bleeding Edge Release (BER)",
+							"desc": "The BER is the absolute latest available code. Possibility of bugs, but latest features!",
+							"install": "https://github.com/atuttle/Taffy/blob/develop/ramen_install/install.cfm",
+							"require":[
+								{
+									"name": "location",
+									"label": "Install Location:",
+									"type": "folder",
+									"default": "{webroot}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+		{
+			"name": "Apps",
+			"icon": "apps.png",
+			"apps": [
+				{
+					"name": "Mango Blog",
+					"desc": "An Extensible Blog Engine",
+					"icon": "",
+					"versions": [
+						{
+							"name": "Mango 1.6",
+							"desc": "Latest stable release of Mango",
+							"install": "",
+							"require": []
 						}
 					]
 				}
