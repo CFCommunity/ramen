@@ -4,6 +4,12 @@ Ramen is inspired by many things. [Homebrew][1], [Ruby Gems][2], and of course t
 
 It's an integrated installation system operated wholly _by and for the ColdFusion Community_. It aims to be compatible with ColdFusion 8 and above.
 
+### Demo!
+
+The UI is still in _very rough shape_, but functionality is starting to come together. [Here's a video of how it looked on day 1][7].
+
+### Adding Installers
+
 We'll get the party started by adding installation scripts for some of our favorite frameworks and apps, but it's up to the community to add installer scripts for your favorites. Don't be intimidated, it can be as easy as this!
 
 ```cfm
@@ -105,3 +111,4 @@ This project is free, open source software, available under the MIT License:
 [4]: https://github.com/CFCommunity/ramen/blob/master/index/taffy.1.1.cfm
 [5]: https://github.com/CFCommunity/ramen/blob/master/index/index.json
 [6]: https://github.com/CFCommunity/ramen/zipball/master
+[7]: https://dl.dropbox.com/u/3831772/ramen_working_prototype.mov
