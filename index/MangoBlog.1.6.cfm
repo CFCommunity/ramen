@@ -1,5 +1,3 @@
-<cfimport taglib="lib/tags" prefix="ramen" />
-
 <cfset ramen.namespace("MangoBlog") />
 <cfset folder = ramen.getParams().parentFolder />
 
@@ -25,11 +23,11 @@
 	<cfif right(relPath, 1) neq "/">
 		<cfset relPath = relPath & "/" />
 	</cfif>
-	<ramen:success>
+	<div class="msg success">
 		<p>Mango has been downloaded and unzipped, but you must <a target="_blank" href="<cfoutput>#relPath#</cfoutput>">run the installer</a>. (opens in a new window/tab)</p>
-	</ramen:success>
+	</div>
 <cfelse>
-	<ramen:success>
+	<div class="msg success">
 		<p>Mango has been downloaded and unzipped, but you must run the installer. It doesn't look like you installed to anywhere inside your webroot, so I couldn't guess the path to the installer. Just open up the root of where your blog should be and Mango will take it from there.</p>
-	</ramen:success>
+	</div>
 </cfif>
