@@ -21,6 +21,19 @@
 									"default": "{webroot}"
 								}
 							]
+						},
+						{
+							"name": "1.1 Official Release",
+							"desc": "This is the latest version of Taffy, now with Railo support and improved ColdSpring integration",
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/taffy.1.1.cfm",
+							"require": [
+								{
+									"name": "location",
+									"label": "Install Location:",
+									"type": "folder",
+									"default": "{webroot}"
+								}
+							]
 						}
 					]
 				}
