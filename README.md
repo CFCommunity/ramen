@@ -61,6 +61,8 @@ The above code sample is [the install script for Taffy 1.1][4]. See how easy it 
 
 I think you can handle that.
 
+Want your favorite framework, app, tool, whatever to be listed? **You're just a pull request away!**
+
 ## Installation into your CF Administrator
 
 Edit /CFIDE/administrator/custommenu.xml to add this line:
