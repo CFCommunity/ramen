@@ -1,5 +1,3 @@
-<cfset ramen = createObject("lib.ramen") />
-
 <cfset ramen.namespace("taffy") />
 <cfset userLocation = ramen.getParams().location />
 
