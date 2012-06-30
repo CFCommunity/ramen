@@ -45,7 +45,7 @@
 			"apps": [
 				{
 					"name": "Mango Blog",
-					"desc": "An Extensible Blog Engine",
+					"desc": "An Extensible Blog Engine. See <a target='_blank' href='http://www.mangoblog.org'>mangoblog.org</a> for more information.",
 					"icon": "",
 					"versions": [
 						{
