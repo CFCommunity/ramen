@@ -13,9 +13,11 @@
 <cfloop query="#dirs#">
 	<cfif left( dirs.name, 14) eq "atuttle-Taffy-">
 		<cfset srcDir = dirs.name />
-		<cfdirectory action="rename" directory="#userLocation#/#srcDir#" newDirectory="#userLocation#/taffy" />
+		<cfdirectory action="rename" directory="#ramen.getDownloadsPath()#/#srcDir#" newDirectory="#userLocation#/taffy" />
 		<cfbreak />
 	</cfif>
 </cfloop>
 
 <cfset ramen.cleanup() />
+
+<p>Taffy install complete.</p>
