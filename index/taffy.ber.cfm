@@ -1,12 +1,17 @@
 <cfset ramen.namespace("taffy") />
 <cfset userLocation = ramen.getParams().location />
 
-<cfoutput>
-	<strong>Install location:</strong> #userLocation#<br/>
-</cfoutput>
+<!--- put any info that comes out into an info block --->
+<ramen:info>
 
-<cfset ramen.download("https://github.com/atuttle/Taffy/zipball/develop", "taffy-ber.zip") />
-<cfset ramen.unzip("taffy-ber.zip", userLocation) />
+	<cfoutput>
+		<p><strong>Install location:</strong> #userLocation#</p>
+	</cfoutput>
+
+	<cfset ramen.download("https://github.com/atuttle/Taffy/zipball/develop", "taffy-ber.zip") />
+	<cfset ramen.unzip("taffy-ber.zip", userLocation) />
+
+</ramen:info>
 
 <!--- since github gives the BER folder downloads a funky name, weve got to figure out what it was so we can rename it --->
 <cfdirectory action="list" directory="#userLocation#" name="dirs" type="dir" />
@@ -20,4 +25,6 @@
 
 <cfset ramen.cleanup() />
 
-<p>Taffy install complete.</p>
+<ramen:success>
+	<p>Taffy install complete.</p>
+</ramen:success>
