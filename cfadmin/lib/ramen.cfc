@@ -70,6 +70,7 @@
 			<cfset namespace(hash(now())) />
 		</cfif>
 		<cfhttp method="get" url="#urlpath#" path="#getDownloadsPath()#" file="#filename#" />
+		<cfset return getDownloadsPath() & "/" & filename />
 	</cffunction>
 
 	<cffunction name="unzip">
