@@ -6,6 +6,9 @@ It's an integrated installation system operated wholly _by and for the ColdFusio
 
 ### Demo!
 
+[![click here to increase the size of your png](https://github.com/CFCommunity/ramen/raw/master/ramen_tn.png)](https://github.com/CFCommunity/ramen/raw/master/ramen.png)
+<br/>_click image to increase the size of your png_
+
 The UI is still in _very rough shape_, but functionality is starting to come together. [Here's a video of how it looked on day 1][7].
 
 ### Adding Installers
