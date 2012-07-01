@@ -38,7 +38,7 @@
 				<cfloop from="1" to="#arrayLen(json.categories[cat].apps[app].versions)#" index="ver">
 					<li>
 						<a href="##" class="showform"><img src="assets/brick.png" /></a> <strong>#json.categories[cat].apps[app].versions[ver].name#</strong> - #json.categories[cat].apps[app].versions[ver].desc#
-						<div class="hidden" style="display:none !important;">
+						<div class="hidden installform" style="display:none !important;">
 							<form action="runner.cfm" method="get">
 								<input type="hidden" name="$script" value="#json.categories[cat].apps[app].versions[ver].install#" />
 
@@ -68,8 +68,9 @@
 	<script type="text/javascript" src="assets/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript">
 		$(function(){
-			$(".showform").click(function(){
-				$(this).parent().find(".hidden").toggle();
+			$(".showform").click(function(e){
+				$(this).parent().find(".hidden").toggle(150);
+				e.preventDefault();
 			});
 		});
 	</script>

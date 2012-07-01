@@ -11,6 +11,20 @@ h1 {
 .hidden {
 	display: none;
 }
+.installform {
+	border: 2px dashed #eee;
+	margin-left: 25px;
+	width: auto;
+	padding: 8px;
+}
+.installform input[type="submit"] {
+	font-size: 1.5em;
+}
+.installform form {
+	margin: 0;
+}
+
+
 a img {
 	border: 0;
 }
