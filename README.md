@@ -39,19 +39,6 @@ The above code sample is [the install script for Taffy 1.1][4]. See how easy it 
 	"icon": "",
 	"versions": [
 		{
-			"name": "Bleeding Edge Release (BER)",
-			"desc": "The BER is the absolute latest available code. Possibility of bugs, but latest features!",
-			"install": "https://raw.github.com/CFCommunity/ramen/master/index/taffy.ber.cfm",
-			"require": [
-				{
-					"name": "location",
-					"label": "Install Location:",
-					"type": "folder",
-					"default": "{webroot}"
-				}
-			]
-		},
-		{
 			"name": "1.1 Official Release",
 			"desc": "This is the latest version of Taffy, now with Railo support and improved ColdSpring integration",
 			"install": "https://raw.github.com/CFCommunity/ramen/master/index/taffy.1.1.cfm",
