@@ -11,6 +11,17 @@ It's an integrated installation system operated wholly _by and for the ColdFusio
 
 The UI is still in _very rough shape_, but functionality is starting to come together. [Here's a video of how it looked on day 1][7].
 
+### FAQ
+
+**Q:** Do I need to know anything about Git or GitHub to use Ramen and install stuff?
+**A:** _Not at all_. Ramen [(will soon be able to)][8] apply updates to itself; so beyond the initial download of the code, you shouldn't need to come back here much if at all.
+
+**Q:** But what about when new installers are added? Don't I need to get the latest updates?
+**A:** Great question. Ramen uses this GitHub repository as its "server" (for lack of a better word) and checks for updates every time you use it. Even better than 1-button updates, this is 0-button updates. Just relax!
+
+**Q:** My workplace has pretty strict policies and I don't think they'd like it talking to GitHub to get installers. Can we run it locally, vet the scripts, and only make available the ones that are approved?
+**A:** Yes, [(soon)][9], and easily!
+
 ### Adding Installers
 
 We'll get the party started by adding installation scripts for some of our favorite frameworks and apps, but it's up to the community to add installer scripts for your favorites. Don't be intimidated, it can be as easy as this!
@@ -102,3 +113,5 @@ This project is free, open source software, available under the MIT License:
 [5]: https://github.com/CFCommunity/ramen/blob/master/index/index.json
 [6]: https://github.com/CFCommunity/ramen/zipball/master
 [7]: https://dl.dropbox.com/u/3831772/ramen_working_prototype.mov
+[8]: https://github.com/CFCommunity/ramen/issues/3
+[9]: https://github.com/CFCommunity/ramen/issues/1
