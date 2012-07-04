@@ -50,7 +50,7 @@
 					"versions": [
 						{
 							"name": "Ramen BER",
-							"desc": "Latest release of Ramen, could be buggy"
+							"desc": "Latest release of Ramen, could be buggy",
 							"install": "https://raw.github.com/CFCommunity/ramen/master/index/Ramen.BER.cfm",
 							"require": []
 						}
