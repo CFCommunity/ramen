@@ -44,6 +44,19 @@
 			"icon": "apps.png",
 			"apps": [
 				{
+					"name": "Ramen",
+					"desc": "Apply udpates to Ramen, the installation system you're currently looking at!",
+					"icon": "",
+					"versions": [
+						{
+							"name": "Ramen BER",
+							"desc": "Latest release of Ramen, could be buggy"
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/Ramen.BER.cfm",
+							"require": []
+						}
+					]
+				},
+				{
 					"name": "Mango Blog",
 					"desc": "An Extensible Blog Engine. See <a target='_blank' href='http://www.mangoblog.org'>mangoblog.org</a> for more information.",
 					"icon": "",
