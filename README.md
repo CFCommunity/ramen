@@ -13,13 +13,13 @@ The UI is still in _very rough shape_, but functionality is starting to come tog
 
 ### FAQ
 
-**Q:** Do I need to know anything about Git or GitHub to use Ramen and install stuff?<br/>
+**Q: Do I need to know anything about Git or GitHub to use Ramen and install stuff?**<br/>
 **A:** _Not at all_. Ramen [(will soon be able to)][8] apply updates to itself; so beyond the initial download of the code, you shouldn't need to come back here much if at all.
 
-**Q:** But what about when new installers are added? Don't I need to get the latest updates?<br/>
+**Q: But what about when new installers are added? Don't I need to get the latest updates?**<br/>
 **A:** Great question. Ramen uses this GitHub repository as its "server" (for lack of a better word) and checks for updates every time you use it. Even better than 1-button updates, this is 0-button updates. Just relax!
 
-**Q:** My workplace has pretty strict policies and I don't think they'd like it talking to GitHub to get installers. Can we run it locally, vet the scripts, and only make available the ones that are approved?<br/>
+**Q: My workplace has pretty strict policies and I don't think they'd like it talking to GitHub to get installers. Can we run it locally, vet the scripts, and only make available the ones that are approved?**<br/>
 **A:** Yes, [(soon)][9], and easily!
 
 ### Adding Installers
