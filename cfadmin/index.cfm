@@ -4,20 +4,33 @@
 	<cfreturn r.filecontent />
 </cffunction>
 
-<cftry>
-	<cfset index = get("https://raw.github.com/CFCommunity/ramen/master/index/index.json") />
-	<cfcatch>
-		<h1>Error</h1>
-		<p>It looks like GitHub is down (or for some other reason, we can't get the index file). Please wait a while and try again.</p>
-		<cfabort/>
-	</cfcatch>
-</cftry>
+<cfset localRepo = expandPath( "/cfide/administrator/ramen/cfadmin/index.json" ) />
+<cfset repoInUse = "github" />
+
+<cfif fileExists( localRepo )>
+	<cffile action="read" file="#localRepo#" variable="index" />
+	<cfset repoInUse = "local" />
+<cfelse>
+	<cftry>
+		<cfset index = get("https://raw.github.com/CFCommunity/ramen/master/index/index.json") />
+		<cfcatch>
+			<h1>Error</h1>
+			<p>It looks like GitHub is down (or for some other reason, we can't get the index file). Please wait a while and try again.</p>
+			<cfabort/>
+		</cfcatch>
+	</cftry>
+</cfif>
 
 <cftry>
-	<cfset json = deserializeJSON(index) />
+	<cfset json = deserializeJSON( index ) />
 	<cfcatch>
 		<h1>Error</h1>
-		<p>Index is invalid json. Sorry about that! Please email <a href="mailto:adam@fusiongrokker.com">adam@fusiongrokker.com</a> to have this addressed!</p>
+		<cfif repoInUse eq "github">
+			<p>Index is invalid json. Sorry about that! Please email <a href="mailto:adam@fusiongrokker.com">adam@fusiongrokker.com</a> to have this addressed!</p>
+		<cfelse>
+			<p>Index is invalid json. Your index file is: <pre><cfoutput>#localRepo#</cfoutput></pre></p>
+			<p>Try running it through <a target="_blank" href="http://jsonlint.com/">JSON Lint</a> to identify any invalid syntax. If JSON Lint reports that the syntax is valid, <a target="_blank" href="https://github.com/cfcommunity/ramen/issues">please report this as an issue</a>!</p>
+		</cfif>
 		<cfabort />
 	</cfcatch>
 </cftry>
