@@ -20,7 +20,7 @@ The UI is still in _very rough shape_, but functionality is starting to come tog
 **A:** Great question. Ramen uses this GitHub repository as its "server" (for lack of a better word) and checks for updates every time you use it. Even better than 1-button updates, this is 0-button updates. Just relax!
 
 **Q: My workplace has pretty strict policies and I don't think they'd like it talking to GitHub to get installers. Can we run it locally, vet the scripts, and only make available the ones that are approved?**<br/>
-**A:** Yes, [(soon)][8], and easily!
+**A:** [Yes, and easily!][8]
 
 ### Adding Installers
 
