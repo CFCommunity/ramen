@@ -32,7 +32,7 @@
 	<cfset userLocation = listAppend(userLocation, createFolderName, "/") />
 </cfif>
 
-<cfset ramen.defaultParam("escapeFolder", "false") />
+<cfset ramen.defaultParam("escapeFolder", false) />
 <cfset escapeFolder = ramen.getParams().escapeFolder />
 <cfif escapeFolder neq "false">
 	<cfset escapeFolderName = ramen.getParams().escapeFolder />
@@ -50,7 +50,7 @@
 
 	<cfset ramen.download( zipFile, "tmp.zip") />
 
-	<cfif escapeFolder>
+	<cfif escapeFolder neq "false">
 		<cfset ramen.unzip( "tmp.zip", userLocation ) />
 	<cfelse>
 		<cfset basepath = ramen.getTmpPath() />
