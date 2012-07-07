@@ -1,10 +1,12 @@
 <cffunction name="get">
 	<cfargument name="path" />
 	<cfargument name="cacheDurationMinutes" default="3" />
-	<cfif structKeyExists(application, "indexCache")>
-		<cfif dateDiff("n", application.indexCache.timestamp, now()) lte arguments.cacheDurationMinutes>
-			<cfheader name="X-RAMEN-CACHE" value="hit" />
-			<cfreturn application.indexCache.data />
+	<cfif arguments.cacheDurationMinutes gt 0>
+		<cfif structKeyExists(application, "indexCache")>
+			<cfif dateDiff("n", application.indexCache.timestamp, now()) lte arguments.cacheDurationMinutes>
+				<cfheader name="X-RAMEN-CACHE" value="hit" />
+				<cfreturn application.indexCache.data />
+			</cfif>
 		</cfif>
 	</cfif>
 	<cfheader name="X-RAMEN-CACHE" value="miss" />
@@ -22,7 +24,12 @@
 	<cfset repoInUse = "local" />
 <cfelse>
 	<cftry>
-		<cfset index = get("https://raw.github.com/CFCommunity/ramen/master/index/index.json") />
+		<cfif structKeyExists(url, "reload") and url.reload eq "true">
+			<cfset cacheLen = 0 />
+		<cfelse>
+			<cfset cacheLen = 3 />
+		</cfif>
+		<cfset index = get("https://raw.github.com/CFCommunity/ramen/master/index/index.json", cacheLen) />
 		<cfcatch>
 			<h1>Error</h1>
 			<p>It looks like GitHub is down (or for some other reason, we can't get the index file). Please wait a while and try again.</p>
@@ -48,6 +55,8 @@
 <cfimport taglib="lib/tags" prefix="ramen" />
 
 <ramen:layout>
+
+	<div id="buttonbar"><button id="reload">Reload Cached Index</button></div>
 
 	<cfoutput>
 		<cfloop from="1" to="#arrayLen(json.categories)#" index="cat">
@@ -93,6 +102,10 @@
 		$(function(){
 			$(".showform").click(function(e){
 				$(this).parent().find(".hidden").toggle(150);
+				e.preventDefault();
+			});
+			$("#reload").click(function(e){
+				window.location.href = window.location.protocol + '//' + window.location.host + '/CFIDE/Administrator/ramen/cfadmin/index.cfm?reload=true';
 				e.preventDefault();
 			});
 		});

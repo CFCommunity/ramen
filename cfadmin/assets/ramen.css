@@ -33,6 +33,10 @@ a img {
 	line-height: 200%;
 }
 
+#buttonbar {
+	text-align: right;
+}
+
 .msg {
 	color: black;
 	padding: 8px;
