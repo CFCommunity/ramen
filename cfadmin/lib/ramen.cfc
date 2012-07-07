@@ -95,6 +95,7 @@
 
 	<cffunction name="cleanup">
 		<cfdirectory action="delete" directory="#variables.tmpPath#" recurse="true" />
+		<cfdirectory action="delete" directory="#variables.downloadsPath#" recurse="true" />
 	</cffunction>
 
 </cfcomponent>
