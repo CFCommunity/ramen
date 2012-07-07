@@ -64,7 +64,7 @@
 			<cfif files.type eq "Dir">
 				<!--- move directories --->
 				<cfset dirCopy(path & "/" & files.name, userLocation & "/" & files.name) />
-				<cfdirectory action="delete" directory="#path#/#files.name#" />
+				<cfdirectory action="delete" directory="#path#/#files.name#" recurse="true" />
 			<cfelseif files.type eq "File">
 				<!--- move files --->
 				<cffile action="move" source="#path#/#files.name#" destination="#userLocation#/#files.name#" />
