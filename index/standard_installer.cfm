@@ -58,12 +58,20 @@
 		<cfset path = basepath & "/" & escapeFolderName />
 
 		<cfdirectory action="list" directory="#path#" recurse="false" name="files" />
+		<strong>Installing files:</strong>
+		<ul>
 		<cfloop query="#files#">
-			<!--- move target directories --->
-
+			<cfif files.type eq "Dir">
+				<!--- move directories --->
+				<cfdirectory action="rename" directory="#path#/#files.name#" newdirectory="#userLocation#/#files.name#" />
+			<cfelseif files.type eq "File">
+				<!--- move files --->
+				<cffile action="move" source="#path#/#files.name#" destination="#userLocation#/#files.name#" />
+			</cfif>
+			<li>/#files.name#</li>
 		</cfloop>
+		</ul>
 	</cfif>
-
 
 	<cfset ramen.cleanup() />
 </div>
