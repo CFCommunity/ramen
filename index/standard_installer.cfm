@@ -63,7 +63,7 @@
 		<cfloop query="#files#">
 			<cfif files.type eq "Dir">
 				<!--- move directories --->
-				<cfset directoryCopy(path & "/" & files.name, userLocation & "/" & files.name) />
+				<cfset dirCopy(path & "/" & files.name, userLocation & "/" & files.name) />
 				<cfdirectory action="delete" directory="#path#/#files.name#" />
 			<cfelseif files.type eq "File">
 				<!--- move files --->
@@ -93,7 +93,7 @@
  @author Joe Rinehart (joe.rinehart@gmail.com)
  @version 3, April 26, 2011
 --->
-<cffunction name="directoryCopy" output="true">
+<cffunction name="dirCopy" output="true">
 	<cfargument name="source" required="true" type="string">
 	<cfargument name="destination" required="true" type="string">
 	<cfargument name="ignore" required="false" type="string" default="">
@@ -117,7 +117,7 @@
 		<cfif contents.type eq "file">
 			<cffile action="copy" source="#arguments.source#/#name#" destination="#arguments.destination#/#name#" nameconflict="#arguments.nameConflict#">
 		<cfelseif contents.type eq "dir">
-			<cfset directoryCopy(arguments.source & "/" & name, arguments.destination & "/" &  name, arguments.ignore, arguments.nameConflict) />
+			<cfset dirCopy(arguments.source & "/" & name, arguments.destination & "/" &  name, arguments.ignore, arguments.nameConflict) />
 		</cfif>
 	</cfloop>
 </cffunction>
