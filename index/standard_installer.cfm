@@ -50,12 +50,11 @@
 
 	<cfset ramen.download( zipFile, "tmp.zip") />
 
-	<cfif escapeFolder neq "false">
-<p>not escaping any folders...</p>
+	<cfif escapeFolder eq "false">
 		<cfset ramen.unzip( "tmp.zip", userLocation ) />
 	<cfelse>
-<p>escaping folders...</p>
 		<cfset basepath = ramen.getTmpPath() />
+		<cfset ramen.unzip( "tmp.zip", basepath ) />
 		<cfset path = basepath & "/" & escapeFolderName />
 
 		<cfdirectory action="list" directory="#path#" recurse="false" name="files" />
