@@ -1,7 +1,17 @@
 <cffunction name="get">
 	<cfargument name="path" />
+	<cfargument name="cacheDurationMinutes" default="3" />
+	<cfif structKeyExists(application, "indexCache")>
+		<cfif dateDiff("n", application.indexCache.timestamp, now()) lte arguments.cacheDurationMinutes>
+			<cfheader name="X-RAMEN-CACHE" value="hit" />
+			<cfreturn application.indexCache.data />
+		</cfif>
+	</cfif>
+	<cfheader name="X-RAMEN-CACHE" value="miss" />
 	<cfhttp url="#arguments.path#" method="get" result="r" />
-	<cfreturn r.filecontent />
+	<cfset application.indexCache.data = r.filecontent />
+	<cfset application.indexCache.timestamp = now() />
+	<cfreturn application.indexCache.data />
 </cffunction>
 
 <cfset localRepo = expandPath( "/cfide/administrator/ramen/cfadmin/index.json" ) />
