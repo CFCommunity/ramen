@@ -40,6 +40,7 @@ a img {
 .msg {
 	color: black;
 	padding: 8px;
+	margin-bottom: 10px;
 	border: 1px solid;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
