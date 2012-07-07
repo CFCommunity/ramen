@@ -69,7 +69,7 @@
 				<!--- move files --->
 				<cffile action="move" source="#path#/#files.name#" destination="#userLocation#/#files.name#" />
 			</cfif>
-			<li>/#files.name#</li>
+			<cfoutput><li>/#files.name#</li></cfoutput>
 		</cfloop>
 		</ul>
 	</cfif>
