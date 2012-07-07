@@ -60,28 +60,41 @@
 
 	<cfoutput>
 		<cfloop from="1" to="#arrayLen(json.categories)#" index="cat">
-			<h1>#json.categories[cat].name#</h1>
+			<cfset currentCat = json.categories[cat] />
+			<h1>#currentCat.name#</h1>
 
-			<cfloop from="1" to="#arrayLen(json.categories[cat].apps)#" index="app">
-				<h2>#json.categories[cat].apps[app].name#</h2>
-				<p>#json.categories[cat].apps[app].desc#</p>
+			<cfloop from="1" to="#arrayLen(currentCat.apps)#" index="app">
+				<cfset currentApp = currentCat.apps[app] />
+				<h2>#currentApp.name#</h2>
+				<p>#currentApp.desc#</p>
 
 				<ul id="apps">
-				<cfloop from="1" to="#arrayLen(json.categories[cat].apps[app].versions)#" index="ver">
+				<cfloop from="1" to="#arrayLen(currentApp.versions)#" index="ver">
+					<cfset currentVer = currentApp.versions[ver] />
 					<li>
-						<a href="##" class="showform"><img src="assets/brick.png" /></a> <strong>#json.categories[cat].apps[app].versions[ver].name#</strong> - #json.categories[cat].apps[app].versions[ver].desc#
+						<a href="##" class="showform"><img src="assets/brick.png" /></a> <strong>#currentVer.name#</strong> - #currentVer.desc#
 						<div class="hidden installform" style="display:none !important;">
 							<form action="runner.cfm" method="get">
-								<input type="hidden" name="$script" value="#json.categories[cat].apps[app].versions[ver].install#" />
+								<input type="hidden" name="$script" value="#currentVer.install#" />
 
-								<cfif arrayLen(json.categories[cat].apps[app].versions[ver].require) gt 0>
-									<cfloop from="1" to="#arrayLen(json.categories[cat].apps[app].versions[ver].require)#" index="req">
-										<label for="#json.categories[cat].apps[app].versions[ver].require[req].name#_#json.categories[cat].apps[app].name#_#json.categories[cat].apps[app].versions[ver].name#">#json.categories[cat].apps[app].versions[ver].require[req].label#</label>
-										<input type="text" size="30"
-											value="#json.categories[cat].apps[app].versions[ver].require[req].default#"
-											name="#json.categories[cat].apps[app].versions[ver].require[req].name#"
-											id="#json.categories[cat].apps[app].versions[ver].require[req].name#_#json.categories[cat].apps[app].name#_#json.categories[cat].apps[app].versions[ver].name#"
-										/><br/>
+								<cfif arrayLen(currentVer.require) gt 0>
+									<cfloop from="1" to="#arrayLen(currentVer.require)#" index="req">
+										<cfset currentReq = currentVer.require[req] />
+
+										<cfif currentReq.type eq "hidden">
+
+											<input type="hidden" name="#currentReq.name#" value="#currentReq.value#" />
+
+										<cfelse>
+
+											<label for="#currentReq.name#_#currentApp.name#_#currentVer.name#">#currentReq.label#</label>
+											<input type="text" size="30"
+												value="#currentReq.default#"
+												name="#currentReq.name#"
+												id="#currentReq.name#_#currentApp.name#_#currentVer.name#"
+											/><br/>
+
+										</cfif>
 									</cfloop>
 								</cfif>
 
