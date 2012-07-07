@@ -63,7 +63,8 @@
 		<cfloop query="#files#">
 			<cfif files.type eq "Dir">
 				<!--- move directories --->
-				<cfdirectory action="rename" directory="#path#/#files.name#" newdirectory="#userLocation#/#files.name#" />
+				<cfset directoryCopy(path & "/" & files.name, userLocation & "/" & files.name) />
+				<cfdirectory action="delete" directory="#path#/#files.name#" />
 			<cfelseif files.type eq "File">
 				<!--- move files --->
 				<cffile action="move" source="#path#/#files.name#" destination="#userLocation#/#files.name#" />
@@ -79,3 +80,44 @@
 <div class="msg success">
 	<p>Install complete.</p>
 </div>
+
+<!---
+ Copies a directory.
+ v3 mod by Anthony Petruzzi
+
+ @param source      Source directory. (Required)
+ @param destination      Destination directory. (Required)
+ @param ignore      List of folders, files to ignore. Defaults to nothing. (Optional)
+ @param nameConflict      What to do when a conflict occurs (skip, overwrite, makeunique). Defaults to overwrite. (Optional)
+ @return Returns nothing.
+ @author Joe Rinehart (joe.rinehart@gmail.com)
+ @version 3, April 26, 2011
+--->
+<cffunction name="directoryCopy" output="true">
+	<cfargument name="source" required="true" type="string">
+	<cfargument name="destination" required="true" type="string">
+	<cfargument name="ignore" required="false" type="string" default="">
+	<cfargument name="nameconflict" required="true" default="overwrite">
+
+	<cfset var contents = "" />
+
+	<cfif not(directoryExists(arguments.destination))>
+		<cfdirectory action="create" directory="#arguments.destination#">
+	</cfif>
+
+	<cfdirectory action="list" directory="#arguments.source#" name="contents">
+
+	<cfif len(arguments.ignore)>
+		<cfquery dbtype="query" name="contents">
+		select * from contents where name not in(#ListQualify(arguments.ignore, "'")#)
+		</cfquery>
+	</cfif>
+
+	<cfloop query="contents">
+		<cfif contents.type eq "file">
+			<cffile action="copy" source="#arguments.source#/#name#" destination="#arguments.destination#/#name#" nameconflict="#arguments.nameConflict#">
+		<cfelseif contents.type eq "dir">
+			<cfset directoryCopy(arguments.source & "/" & name, arguments.destination & "/" &  name, arguments.ignore, arguments.nameConflict) />
+		</cfif>
+	</cfloop>
+</cffunction>
