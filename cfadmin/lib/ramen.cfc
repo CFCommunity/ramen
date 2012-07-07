@@ -60,6 +60,12 @@
 		function getParams(){
 			return variables.$;
 		}
+		function defaultParam(varname, defaultVal){
+			if (structKeyExists(variables.$, varname)){
+				return;
+			}
+			variables.$[varname] = defaultVal;
+		}
 
 	</cfscript>
 

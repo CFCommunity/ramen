@@ -22,13 +22,20 @@
 	"{webroot}/mxunit" so that the user knows they need to include the "/mxunit" portion and you can
 	safely ignore the create folder setting.
 --->
+<cfset ramen.defaultParam("createFolder", false) />
 <cfset createFolder = ramen.getParams().createFolder />
-<cfif createFolder>
-	<cfset createFolderName = ramen.getParams().createFolderName />
+<cfif createFolder neq "false">
+	<cfset createFolderName = ramen.getParams().createFolder />
 </cfif>
 
-<cfif createFolder>
+<cfif createFolder neq "false">
 	<cfset userLocation = listAppend(userLocation, createFolderName, "/") />
+</cfif>
+
+<cfset ramen.defaultParam("escapeFolder", "false") />
+<cfset escapeFolder = ramen.getParams().escapeFolder />
+<cfif escapeFolder neq "false">
+	<cfset escapeFolderName = ramen.getParams().escapeFolder />
 </cfif>
 
 <div class="msg info">
@@ -42,7 +49,22 @@
 	</cfif>
 
 	<cfset ramen.download( zipFile, "tmp.zip") />
-	<cfset ramen.unzip( "tmp.zip", userLocation ) />
+
+	<cfif escapeFolder>
+		<cfset ramen.unzip( "tmp.zip", userLocation ) />
+	<cfelse>
+		<cfset basepath = ramen.getTmpPath() />
+		<cfset path = basepath & "/" & escapeFolderName />
+
+		<cfdirectory action="list" directory="#path#" recurse="false" name="files" />
+		<cfdump var="#files#" abort="true" />
+		<cfloop query="#files#">
+			<!--- move target directories --->
+
+		</cfloop>
+	</cfif>
+
+
 	<cfset ramen.cleanup() />
 </div>
 
