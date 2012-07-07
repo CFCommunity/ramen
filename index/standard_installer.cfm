@@ -58,7 +58,6 @@
 		<cfset path = basepath & "/" & escapeFolderName />
 
 		<cfdirectory action="list" directory="#path#" recurse="false" name="files" />
-		<cfdump var="#files#" abort="true" /><cfabort />
 		<cfloop query="#files#">
 			<!--- move target directories --->
 
