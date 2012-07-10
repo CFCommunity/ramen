@@ -36,6 +36,19 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "MXUnit",
+					"desc": "Unit Testing framework for ColdFusion developers",
+					"icon": "",
+					"versions": [
+						{
+							"name": "MXUnit",
+							"desc": "Latest stable release of MXUnit. See <a target='_blank' href='http://mxunit.org/'>mxunit.org/</a> for more information.",
+							"install": "https://raw.github.com/coldfumonkeh/ramen/master/index/mxunit.cfm",
+							"require": []
+						}
+					]
 				}
 			]
 		},
