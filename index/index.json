@@ -46,7 +46,14 @@
 							"name": "MXUnit",
 							"desc": "Latest stable release of MXUnit. See <a target='_blank' href='http://mxunit.org/'>mxunit.org/</a> for more information.",
 							"install": "https://raw.github.com/coldfumonkeh/ramen/master/index/mxunit.cfm",
-							"require": []
+							"require": [
+								{
+									"name": "location",
+									"label": "Install Location:",
+									"type": "folder",
+									"default": "{webroot}"
+								}
+							]
 						}
 					]
 				}
