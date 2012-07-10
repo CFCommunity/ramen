@@ -44,8 +44,8 @@
 					"versions": [
 						{
 							"name": "MXUnit",
-							"desc": "Latest stable release of MXUnit. See <a target='_blank' href='http://mxunit.org/'>mxunit.org/</a> for more information.",
-							"install": "https://raw.github.com/coldfumonkeh/ramen/master/index/mxunit.cfm",
+							"desc": "Latest stable release of MXUnit. See <a target='_blank' href='http://mxunit.org/'>mxunit.org</a> for more information.",
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/mxunit.cfm",
 							"require": [
 								{
 									"name": "location",
@@ -104,7 +104,7 @@
 						{
 							"name": "monkehTweet BER",
 							"desc": "Latest release of monkehTweet, direct from the GitHub source.",
-							"install": "https://raw.github.com/coldfumonkeh/ramen/master/index/monkehTweet.cfm",
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/monkehTweet.cfm",
 							"require": [
 								{
 									"name": "location",
