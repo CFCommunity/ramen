@@ -81,21 +81,7 @@
 		{
 			"name": "Misc",
 			"icon": "misc.png",
-			"apps": [
-				{
-					"name": "CFScript Community Components",
-					"desc": "Filling in some of the holes in CFScript",
-					"icon": "",
-					"versions": [
-						{
-							"name": "CF9 set, version 1.0",
-							"desc": "Latest version for ColdFusion 9",
-							"install": "",
-							"require": []
-						}
-					]
-				}
-			]
+			"apps": []
 		}
 	]
 }
