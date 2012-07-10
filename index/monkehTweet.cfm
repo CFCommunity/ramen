@@ -15,7 +15,7 @@
 <!--- since github gives the BER folder downloads a funky name, weve got to figure out what it was so we can rename it --->
 <cfdirectory action="list" directory="#userLocation#" name="dirs" type="dir" />
 <cfloop query="#dirs#">
-	<cfif left( dirs.name, 26) eq "coldfumonkeh-monkehtweets-">
+	<cfif left( dirs.name, 26) eq "coldfumonkeh-monkehTweets-">
 		<cfset srcDir = dirs.name />
 		<cfdirectory action="rename" directory="#ramen.getDownloadsPath()#/#srcDir#" newDirectory="#userLocation#/monkehtweet" />
 		<cfbreak />
