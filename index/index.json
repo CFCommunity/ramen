@@ -75,6 +75,26 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "monkehTweet",
+					"desc": "A CFC wrapper to easily let you intergate your applications with the Twitter API.",
+					"icon": "",
+					"versions": [
+						{
+							"name": "monkehTweet BER",
+							"desc": "Latest release of monkehTweet, direct from the GitHub source.",
+							"install": "https://raw.github.com/coldfumonkeh/ramen/master/index/monkehTweet.cfm",
+							"require": [
+								{
+									"name": "location",
+									"label": "Install Location:",
+									"type": "folder",
+									"default": "{webroot}"
+								}
+							]
+						}
+					]
 				}
 			]
 		},
