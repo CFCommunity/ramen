@@ -36,6 +36,26 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "MXUnit",
+					"desc": "Unit Testing framework for ColdFusion developers",
+					"icon": "",
+					"versions": [
+						{
+							"name": "MXUnit",
+							"desc": "Latest stable release of MXUnit. See <a target='_blank' href='http://mxunit.org/'>mxunit.org</a> for more information.",
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/mxunit.cfm",
+							"require": [
+								{
+									"name": "location",
+									"label": "Install Location:",
+									"type": "folder",
+									"default": "{webroot}"
+								}
+							]
+						}
+					]
 				}
 			]
 		},
@@ -69,6 +89,26 @@
 								{
 									"name": "parentFolder",
 									"label": "Install Location (folder must already exist)",
+									"type": "folder",
+									"default": "{webroot}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "monkehTweet",
+					"desc": "A CFC wrapper to easily let you intergate your applications with the Twitter API.",
+					"icon": "",
+					"versions": [
+						{
+							"name": "monkehTweet BER",
+							"desc": "Latest release of monkehTweet, direct from the GitHub source.",
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/monkehTweet.cfm",
+							"require": [
+								{
+									"name": "location",
+									"label": "Install Location:",
 									"type": "folder",
 									"default": "{webroot}"
 								}

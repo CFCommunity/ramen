@@ -72,7 +72,7 @@
 				<cfloop from="1" to="#arrayLen(currentApp.versions)#" index="ver">
 					<cfset currentVer = currentApp.versions[ver] />
 					<li>
-						<a href="##" class="showform"><img src="assets/brick.png" /></a> <strong>#currentVer.name#</strong> - #currentVer.desc#
+						<a href="##" class="showform" title="Install #currentVer.name#"><img src="assets/brick.png" /></a> <strong>#currentVer.name#</strong> - #currentVer.desc#
 						<div class="hidden installform" style="display:none !important;">
 							<form action="runner.cfm" method="get">
 								<input type="hidden" name="$script" value="#currentVer.install#" />
