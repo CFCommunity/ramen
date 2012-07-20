@@ -1,18 +1,11 @@
 <cfscript>
 ramen.namespace("farcry");
 userLocation = expandPath("/");
+ramen.defaultParam("installCMSPlugin", false);
+ramen.defaultParam("installFandangoSkeleton", false);
 params = ramen.getParams();
-if (structKeyExists(params, "installCMSPlugin")) {
-	installCMSPlugin = params["installCMSPlugin"];
-} else {
-	installCMSPlugin = false;
-}
-if (structKeyExists(params, "installFandangoSkeleton")) {
-	installFandangoSkeleton = params["installFandangoSkeleton"];
-} else {
-	installFandangoSkeleton = false;
-}
-
+installCMSPlugin = params["installCMSPlugin"];
+installFandangoSkeleton = params["installFandangoSkeleton"];
 if (!isBoolean(installCMSPlugin)) {
 	installCMSPlugin = false;
 }
