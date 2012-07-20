@@ -56,6 +56,32 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "FarCry",
+					"desc": "FarCry Core is a web application framework based on the ColdFusion language.",
+					"icon": "",
+					"versions": [
+						{
+							"name": "FarCry 6.2",
+							"desc": "Latest stable release of FarCry 6.2, FarCry CMS plugin and Fandango Skeleton. See <a target='_blank' href='http://farcrycore.org/'>farcrycore.org</a> for more information.",
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/mxunit.cfm",
+							"require": [
+								{
+									"name": "installCMSPlugin",
+									"label": "Install CMS Plugin?",
+									"type": "checkbox",
+									"default": "true"
+								},
+								{
+									"name": "installFandangoSkeleton",
+									"label": "Install Fandango Skeleton?",
+									"type": "checkbox",
+									"default": "true"
+								}
+							]
+						}
+					]
 				}
 			]
 		},
