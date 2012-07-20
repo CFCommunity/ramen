@@ -69,6 +69,6 @@ ramen.unzip("farcry-core-6.2.0.zip", userLocation & "farcry", true);
 <cfoutput>
 <div class="msg info">
 	<p><strong>Install location:</strong> #userLocation#farcry</p>
-	<p>Continue to the <a href="/farcry/core/webtop">FarCry Installer</a></p>
+	<p>Continue to the <a target="_blank" href="/farcry/core/webtop">FarCry Installer</a></p>
 </div>
 </cfoutput>
