@@ -14,20 +14,13 @@ if (!isBoolean(installFandangoSkeleton)) {
 }
 
 // create installation directories
-if (!directoryExists(userLocation & "farcry")) {
-	directoryCreate(userLocation & "farcry");
+ramen.makePathExist(userLocation & "farcry");
+ramen.makePathExist(userLocation & "farcry/projects");
+if (installCMSPlugin) {
+	ramen.makePathExist(userLocation & "farcry/plugins");
 }
-
-if (!directoryExists(userLocation & "farcry/projects")) {
-	directoryCreate(userLocation & "farcry/projects");
-}
-
-if (installCMSPlugin and !directoryExists(userLocation & "farcry/plugins")) {
-	directoryCreate(userLocation & "farcry/plugins");
-}
-
-if (installFandangoSkeleton and !directoryExists(userLocation & "farcry/skeletons")) {
-	directoryCreate(userLocation & "farcry/skeletons");
+if (installFandangoSkeleton) {
+	ramen.makePathExist(userLocation & "farcry/skeletons");	
 }
 
 // install core
