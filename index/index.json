@@ -56,7 +56,50 @@
 							]
 						}
 					]
-				}
+				},
+				{
+					"name": "CFConcurrent",
+					"desc": "Concurrency as it should be",
+					"icon": "",
+					"versions": [
+						{
+							"name": "v1.0 Full",
+							"desc": "Full developer version of the most recent stable release of CFConcurrent.",
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/standard_installer.cfm",
+							"require": [
+								{
+									"name": "location",
+									"label": "Install Location:",
+									"type": "folder",
+									"default": "{webroot}/"
+								},
+								{
+									"name": "zipfile",
+									"type": "hidden",
+									"value": "https://github.com/downloads/marcesher/cfconcurrent/CFConcurrent.zip"
+								}
+							]
+						},
+						{
+							"name": "v1.0 Minimal",
+							"desc": "Minimal, production-suitable version of the most recent stable release of CFConcurrent.",
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/standard_installer.cfm",
+							"require": [
+								{
+									"name": "location",
+									"label": "Install Location:",
+									"type": "folder",
+									"default": "{webroot}/"
+								},
+								{
+									"name": "zipfile",
+									"type": "hidden",
+									"value": "https://github.com/downloads/marcesher/cfconcurrent/CFConcurrent-min.zip"
+								}
+							]
+						}
+					]
+				}				
 			]
 		},
 		{
