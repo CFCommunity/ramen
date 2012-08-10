@@ -85,6 +85,17 @@
 
 											<input type="hidden" name="#currentReq.name#" value="#currentReq.value#" />
 
+										<cfelseif currentReq.type eq "checkbox">
+
+											<input type="checkbox"
+												<cfif currentReq.default eq true>checked="checked"</cfif>
+												value="<cfif structKeyExists(currentReq, 'value')>#currentReq.value#><cfelse>1</cfif>"
+												name="#currentReq.name#"
+												id="#currentReq.name#_#currentApp.name#_#currentVer.name#"
+											/>
+											<label for="#currentReq.name#_#currentApp.name#_#currentVer.name#">#currentReq.label#</label>
+											<br/>
+											
 										<cfelse>
 
 											<label for="#currentReq.name#_#currentApp.name#_#currentVer.name#">#currentReq.label#</label>
