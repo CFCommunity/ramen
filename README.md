@@ -9,7 +9,7 @@ It's an integrated installation system operated wholly _by and for the ColdFusio
 [![click here to increase the size of your png](https://github.com/CFCommunity/ramen/raw/master/ramen_tn.png)](https://github.com/CFCommunity/ramen/raw/master/ramen.png)
 <br/>_click image to increase the size of your png_
 
-The UI is still in _very rough shape_, but functionality is starting to come together. [Here's a video of how it looked on day 1][7].
+The UI is still in _very rough shape_, but functionality is starting to come together. [Here's a video of how it works][7].
 
 ### FAQ
 
@@ -112,5 +112,5 @@ This project is free, open source software, available under the MIT License:
 [4]: https://github.com/CFCommunity/ramen/blob/master/index/taffy.1.1.cfm
 [5]: https://github.com/CFCommunity/ramen/blob/master/index/index.json
 [6]: https://github.com/CFCommunity/ramen/zipball/master
-[7]: https://dl.dropbox.com/u/3831772/ramen_working_prototype.mov
+[7]: https://vimeo.com/fusiongrokker/ramen
 [8]: https://github.com/CFCommunity/ramen/issues/1

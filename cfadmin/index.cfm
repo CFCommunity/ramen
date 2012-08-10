@@ -16,9 +16,9 @@
 	<cfreturn application.indexCache.data />
 </cffunction>
 
-<cfset localRepo = expandPath( "/cfide/administrator/ramen/cfadmin/index.json" ) />
+<cfset localRepo = expandPath( "/cfide/administrator/ramen/index/index.json" ) />
 <cfset repoInUse = "github" />
-
+<cflog text="Local repo is #localRepo#. Does it exist: #fileExists(localRepo)#">
 <cfif fileExists( localRepo )>
 	<cffile action="read" file="#localRepo#" variable="index" />
 	<cfset repoInUse = "local" />
