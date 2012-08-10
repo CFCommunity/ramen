@@ -98,7 +98,7 @@
 				},
 				{
 					"name": "monkehTweet",
-					"desc": "A CFC wrapper to easily let you intergate your applications with the Twitter API.",
+					"desc": "A CFC wrapper to easily let you integrate your applications with the Twitter API.",
 					"icon": "",
 					"versions": [
 						{
