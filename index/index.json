@@ -55,7 +55,7 @@
 						{
 							"name": "FarCry 6.2",
 							"desc": "Latest stable release of FarCry 6.2, FarCry CMS plugin and Fandango Skeleton. See <a target='_blank' href='http://farcrycore.org/'>farcrycore.org</a> for more information.",
-							"install": "https://raw.github.com/CFCommunity/ramen/master/index/mxunit.cfm",
+							"install": "https://raw.github.com/cfcommunity/ramen/master/index/farcry.cfm",
 							"require": [
 								{
 									"name": "installCMSPlugin",
