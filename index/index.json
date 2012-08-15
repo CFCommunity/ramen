@@ -48,6 +48,31 @@
 					]
 				},
 				{
+					"name": "CFSelenium",
+					"desc": "A native Selenium RC binding for ColdFusion, useful for writing tests in CFML that will trigger actions in the browser and verify the results.",
+					"icon": "",
+					"versions": [
+						{
+							"name": "Current Version (from GitHub master branch)",
+							"desc": "Download from the GitHub project master branch (note: large download, be patient).",
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/standard_github_installer.cfm",
+							"require": [
+								{
+									"name": "location",
+									"label": "Install Location:",
+									"type": "folder",
+									"default": "{webroot}"
+								},
+								{
+									"name": "zipfile",
+									"type": "hidden",
+									"value": "https://github.com/bobsilverberg/CFSelenium/zipball/master"
+								}
+							]
+						}
+					]
+				},
+				{
 					"name": "FarCry",
 					"desc": "FarCry Core is a web application framework based on the ColdFusion language.",
 					"icon": "",
@@ -68,6 +93,59 @@
 									"label": "Install Fandango Skeleton?",
 									"type": "checkbox",
 									"default": "true"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Framework One (FW/1)",
+					"desc": "A web application framework based on ColdFusion.",
+					"icon": "",
+					"versions": [
+						{
+							"name": "Full Resource Download (from GitHub master branch).",
+							"desc": "Includes documentation, code/app examples, and a skeleton app in addition to the framework files.",
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/standard_github_installer.cfm",
+							"require": [
+								{
+									"name": "location",
+									"label": "Install Location:",
+									"type": "folder",
+									"default": "{webroot}"
+								},
+								{
+									"name": "zipfile",
+									"type": "hidden",
+									"value": "https://github.com/seancorfield/fw1/zipball/master"
+								}
+							]
+						},
+						{
+							"name": "Framework Folder Only (from GitHub master branch).",
+							"desc": "For downloading just the framework (org) folder.",
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/standard_github_installer.cfm",
+							"require": [
+								{
+									"name": "location",
+									"label": "Install Location:",
+									"type": "folder",
+									"default": "{webroot}"
+								},
+								{
+									"name": "zipfile",
+									"type": "hidden",
+									"value": "https://github.com/seancorfield/fw1/zipball/master"
+								},
+								{
+									"name": "escapeFolder",
+									"type": "hidden",
+									"value": "org"
+								},
+								{
+									"name": "createFolder",
+									"type": "hidden",
+									"value": "org"
 								}
 							]
 						}
@@ -121,6 +199,31 @@
 									"label": "Install Location:",
 									"type": "folder",
 									"default": "{webroot}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "ValidateThis",
+					"desc": "An object oriented validation framework for ColdFusion objects.",
+					"icon": "",
+					"versions": [
+						{
+							"name": "Current Version (from GitHub master branch)",
+							"desc": "Download from the GitHub project master branch.",
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/standard_github_installer.cfm",
+							"require": [
+								{
+									"name": "location",
+									"label": "Install Location:",
+									"type": "folder",
+									"default": "{webroot}"
+								},
+								{
+									"name": "zipfile",
+									"type": "hidden",
+									"value": "https://github.com/bobsilverberg/ValidateThis/zipball/master"
 								}
 							]
 						}
