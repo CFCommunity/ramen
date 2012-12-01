@@ -276,6 +276,26 @@
 					]
 				},
 				{
+					"name": "Underscore.cfc",
+					"desc": "An Underscore.js port for Coldfusion. Functional programming library.",
+					"icon": "",
+					"versions": [
+						{
+							"name": "Underscore.cfc",
+							"desc": "Version 2.2",
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/underscore.2.2.cfm",
+							"require": [
+								{
+									"name": "location",
+									"label": "Install Location:",
+									"type": "folder",
+									"default": "{webroot}"
+								}
+							]
+						}
+					]
+				},
+				{
 					"name": "Ramen",
 					"desc": "Apply udpates to Ramen, the installation system you're currently looking at!",
 					"icon": "",
