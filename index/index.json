@@ -282,7 +282,7 @@
 					"versions": [
 						{
 							"name": "Underscore.cfc",
-							"desc": "Version 2.2",
+							"desc": "Version 2.2 (requires Coldfusion 10+)",
 							"install": "https://raw.github.com/CFCommunity/ramen/master/index/underscore.2.2.cfm",
 							"require": [
 								{
