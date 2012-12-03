@@ -9,7 +9,7 @@ It's an integrated installation system operated wholly _by and for the ColdFusio
 [![click here to increase the size of your png](https://github.com/CFCommunity/ramen/raw/master/ramen_tn.png)](https://github.com/CFCommunity/ramen/raw/master/ramen.png)
 <br/>_click image to increase the size of your png_
 
-The UI is still in _very rough shape_, but functionality is starting to come together. [Here's a video of how it works][7].
+[Here's a video of how it works][7].
 
 ### FAQ
 
@@ -21,6 +21,12 @@ The UI is still in _very rough shape_, but functionality is starting to come tog
 
 **Q: My workplace has pretty strict policies and I don't think they'd like it talking to GitHub to get installers. Can we run it locally, vet the scripts, and only make available the ones that are approved?**<br/>
 **A:** [Yes, and easily!][8]
+
+### Developer Workflow
+
+I've created a (14 minute) screencast covering typical developer workflow for adding your own installers to Ramen:
+
+[![ramen workflow video](https://dl.dropbox.com/u/3831772/ramen-workflow.png)](https://dl.dropbox.com/u/3831772/ramen-workflow.mov)
 
 ### Adding Installers
 
