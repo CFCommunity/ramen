@@ -73,6 +73,31 @@
 					]
 				},
 				{
+					"name": "ColdSpring",
+					"desc": "ColdSpring makes the configuration and dependencies of your CFCs easier to manage. It brings the power of the popular Spring framework for Java to ColdFusion. ColdSpring is also the first Aspect-Oriented-Programming (AOP) framework for CFCs. ColdSpring plays well with other frameworks, like Mach-II, Model-Glue, and Fusebox.",
+					"icon": "",
+					"versions": [
+						{
+							"name": "ColdSpring 1.2 Stable",
+							"desc": "The latest stable release of the ColdSpring Framework",
+							"install": "https://raw.github.com/CFCommunity/ramen/master/index/standard_installer.cfm",
+							"require": [
+								{
+									"name": "location",
+									"label": "Install Location:",
+									"type": "folder",
+									"default": "{webroot}"
+								},
+								{
+									"name": "zipfile",
+									"type": "hidden",
+									"value": "http://coldspringframework.org/downloads/coldspring1-2-final.zip"
+								}
+							]
+						}
+					]
+				},
+				{
 					"name": "FarCry",
 					"desc": "FarCry Core is a web application framework based on the ColdFusion language.",
 					"icon": "",
