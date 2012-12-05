@@ -24,9 +24,7 @@ It's an integrated installation system operated wholly _by and for the ColdFusio
 
 ### Developer Workflow
 
-I've created a (14 minute) screencast covering typical developer workflow for adding your own installers to Ramen:
-
-[![ramen workflow video](https://dl.dropbox.com/u/3831772/ramen-workflow.png)](https://dl.dropbox.com/u/3831772/ramen-workflow.mov)
+I've created a (14 minute) [screencast covering typical developer workflow](https://dl.dropbox.com/u/3831772/ramen-workflow.mov) for adding your own installers to Ramen:
 
 ### Adding Installers
 
